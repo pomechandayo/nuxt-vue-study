@@ -4,4 +4,8 @@ WORKDIR /var/www/html
 
 RUN apk update && \
 npm install -g @vue/cli && \
-npm install -g @vue/cli-service-global
+npm install -g @vue/cli-service-global && \
+npm install -g npm
+
+WORKDIR /var/www/html/vue-study/
+# CMD ["npm", "run", "dev"]

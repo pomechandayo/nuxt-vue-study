@@ -1,0 +1,16 @@
+/* theme color */
+$--color-primary: teal;
+$--color-black: #000;
+
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+.el-header {
+  color: $--color-primary;
+}
+
+.el-input {
+  color: $--color-black;
+}

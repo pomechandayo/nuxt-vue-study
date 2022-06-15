@@ -31,18 +31,36 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/vuetify'
   ],
-
+  vuetify: {
+    theme: { 
+      themes: {
+        dark: {
+          // 'background-color: #fff;'
+        }
+      }
+    }
+  },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: [/^element-ui/],
+    // transpile: [/^element-ui/],
   },
   server: {
     host: '0.0.0.0'
   },
-  mode: 'spa'
+  mode: 'spa',
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api/': {
+      target: 'http://localhost:18083',
+    },
+  }
 }
